@@ -1,6 +1,4 @@
-"Important"
 "Database First Approach Necessary Steps for Understanding"
-
 
 SQL server connection in visual Studio Code
 
