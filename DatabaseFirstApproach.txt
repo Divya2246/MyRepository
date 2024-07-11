@@ -1,3 +1,4 @@
+"Database First Approach Necessary Steps for Understanding"
 SQL server connection in visual Studio Code
 
 Scaffold-DbContext "server=DESKTOP-VG8LH3M\SQLEXPRESS; database=MyDB; trusted_connection=true; TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
