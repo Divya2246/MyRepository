@@ -1,0 +1,16 @@
+SQL server connection in visual Studio Code
+
+Scaffold-DbContext "server=DESKTOP-VG8LH3M\SQLEXPRESS; database=MyDB; trusted_connection=true; TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Code to add in Program.cs to make database Connectivity: when database first approach is used
+
+var provider=builder.Services.BuildServiceProvider();
+var config=provider.GetService<IConfiguration>();
+builder.Services.AddDbContext<MyDbContext>(item => item.UseSqlServer(config.GetConnectionString("dbcs")));
+
+in code first approach we need to use these connection string to configure the database connection  and need to download SQL server after adding server we need to create database and table in database. then we need to connect with server and after hitting command in console which is provided upside it creates one default folder with model classes whose table are present in database.
+
+Web API using Code First Approach
+In this way of creating Web API first developer no need to create database externally. it is created automatically using entity framework concept. here we need to create model class by our own and need to create one class specific with that model class named for ex: for Student Model class create StudentDBContext class and after creation of these classes create migration between them.
+
+
